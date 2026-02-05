@@ -49,7 +49,7 @@ async def _send_song_without_cache(song: BaseSong):
     else:
         receipt = None
         async with RecallContext() as recall:
-            await recall.send(UniMessage.text("处理中，请稍等哦~"))
+            await recall.send(UniMessage.text("⚡超频处理中，请稍等哦～"))
             with warning_suppress(f"Send {song} file failed"):
                 receipt = await send_song_media(song)
 
